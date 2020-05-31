@@ -1,10 +1,8 @@
 --Mod: GreenCandle, Version 1
 local GreenCandle = RegisterMod("GreenCandle", 1)
 
-
 GreenCandle.COLLECTIBLE_GREEN_CANDLE = Isaac.GetItemIdByName("Green Candle")
 
---
 function GreenCandle:onUpdate()
     -- Beginning of run initialization
     if Game():GetFrameCount() == 1 then
@@ -21,7 +19,6 @@ function GreenCandle:onUpdate()
                 player:AddSoulHearts(2)
                 GreenCandle.HasGreenCandle = true
             end
-            if not GrennCandle.HasGreenCandle then
             --Check if there are enemies
             for i, entity in pairs(Isaac.GetRoomEntities()) do --Ongoing
                 --random can be changed to luck stat
@@ -32,7 +29,6 @@ function GreenCandle:onUpdate()
         end
     end
 end
-
 Isaac.DebugString("Hello world!")
 --method is called after game uptades
-GreenCandle:AddCallback(ModCallbacks.MC_POST_UPDATE, GreenCandle.onUpdate)
+GreenCandle:AddCallback(ModCallbacks.MC_POST_UPDATE,GreenCandle.onUpdate)
